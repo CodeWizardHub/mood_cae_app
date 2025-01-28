@@ -1,0 +1,45 @@
+name: healthcare_app
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.8
+  syncfusion_flutter_calendar: ^28.1.41
+  intl: ^0.20.2
+  flutter_screenutil: ^5.9.3
+  font_awesome_flutter: ^10.8.0
+  flutter_bloc_side_effect: ^0.0.2
+  freezed_annotation: ^2.4.4
+  freezed: ^2.5.7
+  auto_route: ^9.3.0+1
+  auto_route_generator: ^9.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.13
+
+
+  flutter_lints: ^4.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/emoji/anger_emoji.png
+    - assets/emoji/calm_emoji.png
+    - assets/emoji/fear_emoji.png
+    - assets/emoji/happy_emoji.png
+    - assets/emoji/sadness_emoji.png
+    - assets/emoji/strength_emoji.png
+
