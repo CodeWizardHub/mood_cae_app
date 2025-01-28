@@ -13,24 +13,23 @@ class SaveButton extends StatelessWidget {
       builder: (context, state) {
         return Padding(
           padding: const EdgeInsets.only(top: 20),
-          child: SizedBox(
-            height: 44,
+          child: GestureDetector(
+            onTap: state.enableSaveButton ? onSaveTap : null,
+
             child: Container(
+              height: 44,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: state.enableSaveButton ? Colors.orange : Colors.grey,
               ),
-              child: Align(
+              child: const Align(
                 alignment: Alignment.center,
-                child: TextButton(
-                  onPressed: state.enableSaveButton ? onSaveTap : null,
-                  child: const Text(
-                    'Сохранить',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w900,
-                        color: Colors.white),
-                  ),
+                child:  Text(
+                  'Сохранить',
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white),
                 ),
               ),
             ),

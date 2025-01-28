@@ -8,6 +8,6 @@ void main() async {
   await initializeDateFormatting('ru_RU', null);
   runApp(BlocProvider(
     create: (context) => QuestionaaireBloc(),
-    child: HealthcareApp(),
+    child: const HealthcareApp(),
   ));
 }

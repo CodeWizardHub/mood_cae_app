@@ -11,7 +11,6 @@ import 'package:healthcare_app/screens/home_screen/widgets/notes_text_field.dart
 import 'package:healthcare_app/screens/home_screen/widgets/save_button.dart';
 import 'package:intl/intl.dart';
 
-//@RoutePage()
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -45,6 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
             state.healcareAppViewModel.date,
           );
           return Scaffold(
+
             appBar: HomePageAppBar(
               title: formattedDate,
             ),
@@ -92,9 +92,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       textFieldController: _textEditingController,
                     ),
                     SaveButton(
-                      onSaveTap: () => context
-                          .read<QuestionaaireBloc>()
-                          .add(const QuestionaaireEvent.saveResult()),
+                      onSaveTap: () {
+                        context
+                        .read<QuestionaaireBloc>()
+                        .add(const QuestionaaireEvent.saveResult());
+                        _showSuccessMessage(context);
+                        
+                      } 
                     ),
                   ],
                 ),
@@ -102,6 +106,23 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           );
         },
+      ),
+    );
+  }
+  void _showSuccessMessage(BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text(
+          'Результат настроения успешно сохранен!', 
+          style: TextStyle(fontSize: 16),
+        ),
+        duration: const Duration(seconds: 2),
+        behavior: SnackBarBehavior.floating, 
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        margin: const EdgeInsets.all(16), 
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
       ),
     );
   }
