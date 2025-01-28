@@ -1,8 +1,8 @@
-import 'package:auto_route/annotations.dart';
+/* import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:healthcare_app/app/app_routes_confic.gr.dart';
 
-@AutoRouterConfig(replaceInRouteName: 'Screen|Page,Route')
+/* @AutoRouterConfig(replaceInRouteName: 'Screen|Page,Route')
 class AppRouter extends RootStackRouter {
 
   @override
@@ -16,4 +16,4 @@ class AppRouter extends RootStackRouter {
   @override
   List<AutoRouteGuard> get guards => [
   ];
-}
+}  */ */

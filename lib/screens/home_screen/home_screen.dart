@@ -1,6 +1,5 @@
 // ignore_for_file: depend_on_referenced_packages
 
-import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:healthcare_app/screens/home_screen/bloc/questionaaire_bloc.dart';
@@ -12,7 +11,7 @@ import 'package:healthcare_app/screens/home_screen/widgets/notes_text_field.dart
 import 'package:healthcare_app/screens/home_screen/widgets/save_button.dart';
 import 'package:intl/intl.dart';
 
-@RoutePage()
+//@RoutePage()
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
